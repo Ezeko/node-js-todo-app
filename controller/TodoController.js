@@ -36,7 +36,7 @@ const TodoController = (app) => {
     app.delete('/todo/:item', (req, res)=>{
         // console.log(req.params)
         // data = data.filter((todo) => {
-        console.log(req.params)
+        // console.log(req.params)
         //     // console.log(todo.item)
         //     // console.log(' '+todo.item !== req.params.item)
         //     return ' ' + todo.item !== req.params.item
