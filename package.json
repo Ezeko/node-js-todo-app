@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index"
   },
+  "keywords": [
+    "heroku"
+  ],
   "author": "Ezekiel Adejobi",
   "license": "ISC",
   "dependencies": {
@@ -14,5 +17,8 @@
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "mongoose": "^5.11.5"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }
