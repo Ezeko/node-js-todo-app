@@ -22,8 +22,8 @@ const TodoController = (app) => {
 
     })
     app.post('/todo', (req, res) => {
-        console.log(req.body)
-        data.push(req.body)
+        // console.log(req.body)
+        // data.push(req.body)
         Todo(req.body).save((err)=>{
             if(err){
                 throw err
@@ -35,14 +35,19 @@ const TodoController = (app) => {
 
     app.delete('/todo/:item', (req, res)=>{
         // console.log(req.params)
-        data = data.filter((todo) => {
-            // console.log(req.params.item)
-            // console.log(todo.item)
-            // console.log(' '+todo.item !== req.params.item)
-            return ' ' + todo.item !== req.params.item
+        // data = data.filter((todo) => {
+        console.log(req.params)
+        //     // console.log(todo.item)
+        //     // console.log(' '+todo.item !== req.params.item)
+        //     return ' ' + todo.item !== req.params.item
+        // })
+        Todo.deleteOne(req.params, (err, data) => {
+            if (err) throw err;
+            console.log('item deleted')
+            res.json(data)
         })
-        // console.log(data)
-        res.json(data)
+        // console.log(req.params)
+        
     })
 }
 
