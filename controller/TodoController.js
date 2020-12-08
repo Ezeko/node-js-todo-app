@@ -4,13 +4,7 @@ var data = [{item: 'get milk'}, {item: 'walk dog'}, {item: 'kick some coding ass
 
 const TodoController = (app) => {
     app.get('/', (req, res) => {
-        todo = Todo.find({}, (err, data) => {
-            if (err) {
-                throw err
-            }
-            return data
-        })
-        return res.json((todo))
+        res.render('stuff')
     })
     app.get('/todo', (req, res) => {
         Todo.find({}, (err, data) => {
