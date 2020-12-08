@@ -4,7 +4,7 @@ var data = [{item: 'get milk'}, {item: 'walk dog'}, {item: 'kick some coding ass
 
 const TodoController = (app) => {
     app.get('/', (req, res) => {
-        res.render('stuff')
+        res.redirect('/todo')
     })
     app.get('/todo', (req, res) => {
         Todo.find({}, (err, data) => {
