@@ -1,1 +1,1 @@
-[live url]: 'https://todo-nodeapp.herokuapp.com/todo'
+live url: https://todo-nodeapp.herokuapp.com/todo
